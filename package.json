@@ -8,7 +8,10 @@
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "netlify serve",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "prettier": "prettier \"**/*.+(js|jsx|css|ts|tsx|cjs|mjs)\"",
+    "format": "npm run prettier -- --list-different",
+    "format:write": "npm run prettier -- --write"
   },
   "dependencies": {
     "@netlify/functions": "^2.6.0",
@@ -30,6 +33,8 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "typescript": "^5.1.6",
     "vite": "^5.0.0",
     "vite-tsconfig-paths": "^4.2.1"
